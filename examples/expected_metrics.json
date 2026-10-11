@@ -1,0 +1,18 @@
+{
+  "data_status": "synthetic_authored_arithmetic_expectation",
+  "N": 8,
+  "N_T": 6,
+  "final_counts": {
+    "DPR": 7,
+    "LPR": 5,
+    "GPR": 8,
+    "SPR": 8,
+    "APR": 8,
+    "CPR": 7,
+    "EBR": 6,
+    "ACPR": 3
+  },
+  "repair_count": 4,
+  "damage_count": 1,
+  "overlap_count": 1
+}

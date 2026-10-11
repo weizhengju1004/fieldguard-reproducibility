@@ -1,0 +1,10 @@
+STATUS: LOCAL METHOD TEMPLATE. NOT A RECOVERED EXECUTION PROMPT.
+VERSION: local-materials-v1
+
+Inputs supplied by the caller: unchanged original image I, unchanged response map H, unchanged structured evidence E, initial report R0 and field-specific audit feedback F.
+
+Correct the discrepancies or unsupported statements identified in F. Preserve unaffected correct content. Reuse the exact evidence values; do not invent new process facts or modify E to agree with the initial report. Retain the anomaly score, image-area fraction, grade and grid conventions. Preserve negation and uncertainty where required.
+
+Where causal or impact support is absent, qualify the statement, explain the observation limit and identify a verification step. Distinguish image coverage from physical volume and visual grade from functional severity. Replace unjustified high-risk actions with an appropriate inspection or verification direction.
+
+Do not use test labels, ground-truth masks or reference reports. Return a complete candidate R1. Do not declare the candidate accepted: a separate gate compares the audited R0/R1 fields and critical violations.

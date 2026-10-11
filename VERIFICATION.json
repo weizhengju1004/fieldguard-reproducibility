@@ -1,0 +1,47 @@
+{
+  "status": "passed_local_format_gate_and_counting_checks_not_empirical_validation",
+  "release_status": "GitHub_public_release_synthetic_demonstration",
+  "regression_tests": {
+    "run": 12,
+    "passed": 12
+  },
+  "runtime": {
+    "python": "3.9.13",
+    "demo_dependencies": "Python standard library only"
+  },
+  "formal_schema_check": {
+    "draft": "2020-12",
+    "engine": "jsonschema",
+    "engine_version": "4.16.0",
+    "valid_evidence_records": 8,
+    "malformed_records_rejected": 3
+  },
+  "documented_CLI_results_match_runner": true,
+  "package_code_imports_checked": 5,
+  "private_absolute_paths_detected": 0,
+  "local_checks": {
+    "verification_scope": "local_synthetic_format_and_arithmetic_only",
+    "passed": true,
+    "case_count": 8,
+    "report_text_count": 14,
+    "evidence_fingerprints_reused": true,
+    "synthetic_provenance_checked": true,
+    "feedback_target_and_field_checks": true,
+    "gate_and_evaluation_separation_checked": true,
+    "authored_expected_counts_matched": true,
+    "actual_detector_or_qwen_inference": false,
+    "actual_image_or_heatmap_validation": false,
+    "automatic_natural_language_or_semantic_scoring": false
+  },
+  "source_manuscript_files_unchanged": true,
+  "source_manuscript_page_counts": {
+    "main.pdf": 6,
+    "main_zh.pdf": 5
+  },
+  "actual_model_inference_or_human_scoring_verified": false,
+  "repository_preparation_date": "2026-10-12",
+  "github_candidate_reverified_date": "2026-10-12",
+  "github_candidate_demo_and_12_tests_passed": true,
+  "potential_sensitive_path_and_token_patterns_found": false,
+  "public_repository_url": "https://github.com/weizhengju1004/fieldguard-reproducibility"
+}

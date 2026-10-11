@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0-demo",
+  "sample_id": "demo-007",
+  "provenance": {
+    "kind": "synthetic_authored",
+    "model_inference_run": false
+  },
+  "image": {
+    "width_px": 1000,
+    "height_px": 1000,
+    "original_image_path": null
+  },
+  "heatmap": {
+    "path": null,
+    "normalized_range": [
+      0,
+      1
+    ]
+  },
+  "anomaly": {
+    "decision": "normal",
+    "score": 0.2
+  },
+  "region": {
+    "mask_empty": true,
+    "principal_component_id": null,
+    "principal_centroid_normalized": null,
+    "grid_location": null,
+    "bounding_box_normalized": null,
+    "area_fraction": null
+  },
+  "visual_grade": "not_applicable",
+  "versions": {
+    "detector_checkpoint_revision": null,
+    "mapping_version": "authored-demo-v1",
+    "audit_rules_version": "local-materials-v1",
+    "prompt_templates_version": "local-materials-v1"
+  }
+}

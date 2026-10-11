@@ -1,0 +1,9 @@
+sample_id,data_status,triggered,output_route,metric_version,R0_DPR,R0_LPR,R0_GPR,R0_SPR,R0_APR,R0_CPR,R0_EBR,FINAL_DPR,FINAL_LPR,FINAL_GPR,FINAL_SPR,FINAL_APR,FINAL_CPR,FINAL_EBR
+demo-001,synthetic_authored,0,retain_r0,R0,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+demo-002,synthetic_authored,1,accept_r1,R1,1,0,1,1,1,1,1,1,1,1,1,1,1,1
+demo-003,synthetic_authored,1,accept_r1,R1,1,1,1,0,0,1,1,1,1,1,1,1,1,1
+demo-004,synthetic_authored,1,retain_r0,R0,1,0,1,1,1,1,1,1,0,1,1,1,1,1
+demo-005,synthetic_authored,1,human_review,R0,1,1,1,1,1,1,0,1,1,1,1,1,1,0
+demo-006,synthetic_authored,1,accept_r1,R1,1,0,1,0,1,1,1,1,0,1,1,1,1,1
+demo-007,synthetic_authored,0,retain_r0,R0,0,0,1,1,1,0,1,0,0,1,1,1,0,1
+demo-008,synthetic_authored,1,accept_r1,R1,1,1,1,1,1,0,1,1,1,1,1,1,1,0

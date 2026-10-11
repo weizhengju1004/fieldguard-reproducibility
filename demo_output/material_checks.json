@@ -1,0 +1,14 @@
+{
+  "verification_scope": "local_synthetic_format_and_arithmetic_only",
+  "passed": true,
+  "case_count": 8,
+  "report_text_count": 14,
+  "evidence_fingerprints_reused": true,
+  "synthetic_provenance_checked": true,
+  "feedback_target_and_field_checks": true,
+  "gate_and_evaluation_separation_checked": true,
+  "authored_expected_counts_matched": true,
+  "actual_detector_or_qwen_inference": false,
+  "actual_image_or_heatmap_validation": false,
+  "automatic_natural_language_or_semantic_scoring": false
+}

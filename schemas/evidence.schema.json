@@ -1,0 +1,296 @@
+{
+  "type": "object",
+  "required": [
+    "schema_version",
+    "sample_id",
+    "provenance",
+    "image",
+    "heatmap",
+    "anomaly",
+    "region",
+    "visual_grade",
+    "versions"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0-demo"
+    },
+    "sample_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "kind",
+        "model_inference_run"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "synthetic_authored",
+            "model_generated"
+          ]
+        },
+        "model_inference_run": {
+          "type": "boolean"
+        }
+      }
+    },
+    "image": {
+      "type": "object",
+      "required": [
+        "width_px",
+        "height_px",
+        "original_image_path"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "width_px": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "height_px": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "original_image_path": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      }
+    },
+    "heatmap": {
+      "type": "object",
+      "required": [
+        "path",
+        "normalized_range"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "normalized_range": {
+          "const": [
+            0,
+            1
+          ]
+        }
+      }
+    },
+    "anomaly": {
+      "type": "object",
+      "required": [
+        "decision",
+        "score"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "decision": {
+          "enum": [
+            "normal",
+            "anomalous"
+          ]
+        },
+        "score": {
+          "$ref": "#/$defs/fraction"
+        }
+      }
+    },
+    "region": {
+      "type": "object",
+      "required": [
+        "mask_empty",
+        "principal_component_id",
+        "principal_centroid_normalized",
+        "grid_location",
+        "bounding_box_normalized",
+        "area_fraction"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "mask_empty": {
+          "type": "boolean"
+        },
+        "principal_component_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "principal_centroid_normalized": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "$ref": "#/$defs/fraction"
+              }
+            }
+          ]
+        },
+        "grid_location": {
+          "enum": [
+            "upper-left",
+            "upper-middle",
+            "upper-right",
+            "middle-left",
+            "center",
+            "middle-right",
+            "lower-left",
+            "lower-middle",
+            "lower-right",
+            null
+          ]
+        },
+        "bounding_box_normalized": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "array",
+              "minItems": 4,
+              "maxItems": 4,
+              "items": {
+                "$ref": "#/$defs/fraction"
+              }
+            }
+          ]
+        },
+        "area_fraction": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "mask_empty": {
+                "const": true
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "principal_component_id": {
+                "type": "null"
+              },
+              "principal_centroid_normalized": {
+                "type": "null"
+              },
+              "grid_location": {
+                "type": "null"
+              },
+              "bounding_box_normalized": {
+                "type": "null"
+              },
+              "area_fraction": {
+                "type": "null"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "principal_component_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "principal_centroid_normalized": {
+                "type": "array"
+              },
+              "grid_location": {
+                "enum": [
+                  "upper-left",
+                  "upper-middle",
+                  "upper-right",
+                  "middle-left",
+                  "center",
+                  "middle-right",
+                  "lower-left",
+                  "lower-middle",
+                  "lower-right"
+                ]
+              },
+              "bounding_box_normalized": {
+                "type": "array"
+              },
+              "area_fraction": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visual_grade": {
+      "enum": [
+        "mild",
+        "moderate",
+        "marked",
+        "not_applicable"
+      ]
+    },
+    "versions": {
+      "type": "object",
+      "required": [
+        "detector_checkpoint_revision",
+        "mapping_version",
+        "audit_rules_version",
+        "prompt_templates_version"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "detector_checkpoint_revision": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "mapping_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "audit_rules_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prompt_templates_version": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FieldGuard proposed evidence representation, demo version",
+  "description": "A proposed interface, not a recovered production schema. Supplied records are synthetic.",
+  "$defs": {
+    "fraction": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  }
+}

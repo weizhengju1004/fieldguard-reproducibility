@@ -1,0 +1,99 @@
+{
+  "result_status": "gate_replay_from_synthetic_authored_labels",
+  "scope": "No natural-language audit, model inference or offline truth is used.",
+  "decisions": [
+    {
+      "triggered": false,
+      "targets": [],
+      "recognized_repairs": 0,
+      "new_audited_errors": 0,
+      "accepted": false,
+      "output_route": "retain_r0",
+      "retained_version": "R0",
+      "sample_id": "demo-001"
+    },
+    {
+      "triggered": true,
+      "targets": [
+        "LPR"
+      ],
+      "recognized_repairs": 1,
+      "new_audited_errors": 0,
+      "accepted": true,
+      "output_route": "accept_r1",
+      "retained_version": "R1",
+      "sample_id": "demo-002"
+    },
+    {
+      "triggered": true,
+      "targets": [
+        "SPR",
+        "APR"
+      ],
+      "recognized_repairs": 2,
+      "new_audited_errors": 0,
+      "accepted": true,
+      "output_route": "accept_r1",
+      "retained_version": "R1",
+      "sample_id": "demo-003"
+    },
+    {
+      "triggered": true,
+      "targets": [
+        "LPR"
+      ],
+      "recognized_repairs": 1,
+      "new_audited_errors": 1,
+      "accepted": false,
+      "output_route": "retain_r0",
+      "retained_version": "R0",
+      "sample_id": "demo-004"
+    },
+    {
+      "triggered": true,
+      "targets": [
+        "EBR"
+      ],
+      "recognized_repairs": 0,
+      "new_audited_errors": 0,
+      "accepted": false,
+      "output_route": "human_review",
+      "retained_version": null,
+      "sample_id": "demo-005"
+    },
+    {
+      "triggered": true,
+      "targets": [
+        "SPR"
+      ],
+      "recognized_repairs": 1,
+      "new_audited_errors": 0,
+      "accepted": true,
+      "output_route": "accept_r1",
+      "retained_version": "R1",
+      "sample_id": "demo-006"
+    },
+    {
+      "triggered": false,
+      "targets": [],
+      "recognized_repairs": 0,
+      "new_audited_errors": 0,
+      "accepted": false,
+      "output_route": "retain_r0",
+      "retained_version": "R0",
+      "sample_id": "demo-007"
+    },
+    {
+      "triggered": true,
+      "targets": [
+        "CPR"
+      ],
+      "recognized_repairs": 1,
+      "new_audited_errors": 0,
+      "accepted": true,
+      "output_route": "accept_r1",
+      "retained_version": "R1",
+      "sample_id": "demo-008"
+    }
+  ]
+}

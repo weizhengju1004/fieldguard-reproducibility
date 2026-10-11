@@ -1,0 +1,8 @@
+STATUS: LOCAL CONTROL TEMPLATE. NOT A RECOVERED EXECUTION PROMPT.
+VERSION: local-materials-v1
+
+Inputs supplied by the caller: the same original image I, response map H, structured evidence E and initial report R0, under the same generation budget as the targeted revision.
+
+Recheck the initial report against the supplied visual bundle and improve it if needed. Preserve evidence values and supported content. Distinguish observations from interpretation and keep unsupported causes and impacts uncertain. Do not use test labels, ground-truth masks or reference reports. Return a complete revised candidate.
+
+Experimental control: do not supply field-specific errors, expected values or identified conflicts in this generic prompt. M1 retains this candidate; A1 applies the gate to the exact same candidate. This package contains the control template only, not M1/A1 model runs.

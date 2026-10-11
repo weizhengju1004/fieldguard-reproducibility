@@ -1,0 +1,12 @@
+STATUS: LOCAL METHOD TEMPLATE. NOT A RECOVERED EXECUTION PROMPT.
+VERSION: local-materials-v1
+
+Inputs supplied by the caller: original image I, normalized response map H, and the fixed structured evidence E. Placeholders describe the input contract; the local synthetic package supplies no real image or response map.
+
+Write a readable industrial inspection report with observations, interpretations and inspection actions. For an anomalous decision, cover visible appearance, location, potential impact, possible cause and inspection action. For a normal decision, explicitly state no visible anomaly, no defect location and the observation scope.
+
+Preserve the decision, principal grid location, visual grade, anomaly score and area fraction in E. Use common units: scores are on [0,1] and image coverage can be expressed as a fraction or percentage. Explicitly state not applicable for location, box and area when the candidate mask is empty. Do not invent a region when none is supplied.
+
+Separate visual observations from engineering interpretation. Candidate area describes image coverage, not material-loss volume. Visual grade describes appearance under the detector mapping, not functional-failure severity. A justified unknown is preferable to an unsupported definite cause or impact. Appearance alone cannot establish equipment history, a failure mechanism or operational consequences. Unverified diagnoses do not justify tool replacement or production stoppage. Recommend a concrete verification step where support is insufficient.
+
+Do not request or use test labels, ground-truth masks or reference reports. Return the complete report R0 for separate auditing.

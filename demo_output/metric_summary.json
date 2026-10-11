@@ -1,0 +1,171 @@
+{
+  "result_status": "aggregate_of_supplied_labels_not_empirical_verification",
+  "input_data_statuses": [
+    "synthetic_authored"
+  ],
+  "N": 8,
+  "N_T": 6,
+  "initial_report_rates": {
+    "DPR": {
+      "count": 7,
+      "denominator": 8,
+      "percentage": 87.5
+    },
+    "LPR": {
+      "count": 4,
+      "denominator": 8,
+      "percentage": 50.0
+    },
+    "GPR": {
+      "count": 8,
+      "denominator": 8,
+      "percentage": 100.0
+    },
+    "SPR": {
+      "count": 6,
+      "denominator": 8,
+      "percentage": 75.0
+    },
+    "APR": {
+      "count": 7,
+      "denominator": 8,
+      "percentage": 87.5
+    },
+    "CPR": {
+      "count": 6,
+      "denominator": 8,
+      "percentage": 75.0
+    },
+    "EBR": {
+      "count": 7,
+      "denominator": 8,
+      "percentage": 87.5
+    },
+    "ACPR": {
+      "count": 1,
+      "denominator": 8,
+      "percentage": 12.5
+    }
+  },
+  "final_report_rates": {
+    "DPR": {
+      "count": 7,
+      "denominator": 8,
+      "percentage": 87.5
+    },
+    "LPR": {
+      "count": 5,
+      "denominator": 8,
+      "percentage": 62.5
+    },
+    "GPR": {
+      "count": 8,
+      "denominator": 8,
+      "percentage": 100.0
+    },
+    "SPR": {
+      "count": 8,
+      "denominator": 8,
+      "percentage": 100.0
+    },
+    "APR": {
+      "count": 8,
+      "denominator": 8,
+      "percentage": 100.0
+    },
+    "CPR": {
+      "count": 7,
+      "denominator": 8,
+      "percentage": 87.5
+    },
+    "EBR": {
+      "count": 6,
+      "denominator": 8,
+      "percentage": 75.0
+    },
+    "ACPR": {
+      "count": 3,
+      "denominator": 8,
+      "percentage": 37.5
+    }
+  },
+  "revision_rates": {
+    "TRR": {
+      "count": 4,
+      "denominator": 6,
+      "percentage": 66.7
+    },
+    "CDR": {
+      "count": 1,
+      "denominator": 6,
+      "percentage": 16.7
+    }
+  },
+  "repair_and_damage_overlap_count": 1,
+  "output_routes": {
+    "accept_r1": 4,
+    "retain_r0": 3,
+    "human_review": 1
+  },
+  "unevaluable_label_cells": 0,
+  "case_events": [
+    {
+      "sample_id": "demo-001",
+      "triggered": false,
+      "repair": false,
+      "damage": false,
+      "metric_version": "R0"
+    },
+    {
+      "sample_id": "demo-002",
+      "triggered": true,
+      "repair": true,
+      "damage": false,
+      "metric_version": "R1"
+    },
+    {
+      "sample_id": "demo-003",
+      "triggered": true,
+      "repair": true,
+      "damage": false,
+      "metric_version": "R1"
+    },
+    {
+      "sample_id": "demo-004",
+      "triggered": true,
+      "repair": false,
+      "damage": false,
+      "metric_version": "R0"
+    },
+    {
+      "sample_id": "demo-005",
+      "triggered": true,
+      "repair": false,
+      "damage": false,
+      "metric_version": "R0"
+    },
+    {
+      "sample_id": "demo-006",
+      "triggered": true,
+      "repair": true,
+      "damage": false,
+      "metric_version": "R1"
+    },
+    {
+      "sample_id": "demo-007",
+      "triggered": false,
+      "repair": false,
+      "damage": false,
+      "metric_version": "R0"
+    },
+    {
+      "sample_id": "demo-008",
+      "triggered": true,
+      "repair": true,
+      "damage": true,
+      "metric_version": "R1"
+    }
+  ],
+  "rounding": "one decimal place, decimal half-up, after integer counting",
+  "scope": "No detector/Qwen inference, reference annotation or semantic review is performed."
+}

@@ -1,0 +1,47 @@
+{
+  "package_name": "FieldGuard supplementary materials",
+  "package_version": "0.1.0-demo",
+  "prepared_date": "2026-10-11",
+  "release_status": "GitHub_public_release_synthetic_demonstration",
+  "dataset_status": "eight_manually_authored_synthetic_examples_not_MVTec_records",
+  "evidence_records": 8,
+  "report_texts": 14,
+  "model_inference_calls": 0,
+  "human_rating_records_included": false,
+  "actual_images_or_heatmaps_included": false,
+  "reproduction_scope": [
+    "candidate_evidence_format",
+    "method_prompt_templates",
+    "audit_specification",
+    "gate_replay_from_authored_q",
+    "metric_aggregation_from_authored_y"
+  ],
+  "not_implemented": [
+    "CLIP_inference",
+    "Qwen_inference",
+    "complete_text_extractor",
+    "independent_semantic_scoring",
+    "manuscript_table_replication"
+  ],
+  "compatible_manuscript": {
+    "delivery_name": "FieldGuard_投稿稿修订_三图文字统一_2026-10-11",
+    "source_sha256": {
+      "main.tex": "d70ec27314e39fe7e4156bd957fdcc5679575cbbb63483a87514f5f146052451",
+      "main_zh.tex": "d72126f3d0f5da323f1344ea4f08fe792dcec5e651031cc05559681f15d37380",
+      "main.pdf": "ca408f9ce9094963e732b43f5464c1e367ba0e37a0cf42b19c02dadefbc1a8ec",
+      "main_zh.pdf": "19507a997490d9bfbe5810225e52b4e91b9b053af28370ea9b6c4f26a421d722"
+    }
+  },
+  "demo_manifest": {
+    "N": 8,
+    "N_T": 6
+  },
+  "manuscript_manifest_for_context_only": {
+    "N": 1725,
+    "N_T": 1112
+  },
+  "public_repository_url": "https://github.com/weizhengju1004/fieldguard-reproducibility",
+  "prepared_for_publication_date": "2026-10-12",
+  "intended_repository_name": "fieldguard-reproducibility",
+  "release_date": "2026-10-12"
+}
